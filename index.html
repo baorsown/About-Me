@@ -32,7 +32,21 @@
           <li><a href=""><i class="fas fa-cloud"></i></a></li>
           <li><a href=""><i class="fas fa-heart"></i></a></li>
           <li><a href=""><i class="fas fa-car"></i></a></li>
-          <li><a href=""><img src="./resource/image/451202882_2499163603627215_2216249781019223243_n.jpg" alt=""></a></li>
+          <li><a href=""></a>
+                      <img id="myImg" src="./resource/image/451202882_2499163603627215_2216249781019223243_n.jpg" alt="Baorsown" style="width:100%;max-width:300px;border-radius: 50%;">
+          </li>
+  <!-- The Modal -->
+  <div div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+          </li>
         </ul>
       </div>
     </div>
@@ -46,7 +60,21 @@
     <div class="content-2 flex">
       <div class="content-1 flex">
         <div class="content-logo">
-          <img src="./resource/image/451202882_2499163603627215_2216249781019223243_n.jpg" alt="Image">
+
+          <img id="myImg" src="./resource/image/451202882_2499163603627215_2216249781019223243_n.jpg" alt="Baorsown" style="width:100%;max-width:300px;border-radius: 50%;">
+
+  <!-- The Modal -->
+  <div div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
         </div>
 
         <div class="content-account">
@@ -521,5 +549,30 @@
   });
   </script>
     
+    <script>
+      // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+  modalImg.style.width="600px";
+  modalImg.style.height="600px";
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+</script>
 </body>
 </html>
