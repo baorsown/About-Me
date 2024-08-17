@@ -102,6 +102,9 @@ body {
   box-shadow: 1px 3px 2px 2px #F7F7F7;
   
 }
+.content-logo :hover img{
+  cursor: pointer;
+}
 .icons-list img{
   width: 52px;
   height: 48px;
@@ -343,6 +346,9 @@ footer{
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+}
+#myImgs{
+  cursor: pointer;
 }
 
 #myImg:hover {opacity: 0.7;}

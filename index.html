@@ -61,19 +61,19 @@
       <div class="content-1 flex">
         <div class="content-logo">
 
-          <img id="myImg" src="./resource/image/451202882_2499163603627215_2216249781019223243_n.jpg" alt="Baorsown" style="width:100%;max-width:300px;border-radius: 50%;">
+          <img id="myImgs" src="./resource/image/451202882_2499163603627215_2216249781019223243_n.jpg" alt="Baorsown" style="width:100%;max-width:300px;border-radius: 50%;">
 
   <!-- The Modal -->
-  <div div id="myModal" class="modal">
+  <div div id="myModals" class="modal">
 
   <!-- The Close Button -->
   <span class="close">&times;</span>
 
   <!-- Modal Content (The Image) -->
-  <img class="modal-content" id="img01">
+  <img class="modal-contents" id="img01s">
 
   <!-- Modal Caption (Image Text) -->
-  <div id="caption"></div>
+  <div id="captions"></div>
 </div>
         </div>
 
@@ -168,10 +168,10 @@
                 <p class="color-subheadings">Travel</p>
               </div>
             </div>
-            <div id="shortContents w-60" class="title-color">
+            <div id="shortContents " class="title-color">
               Tôi có niềm đam mê với du lịch, đặc biệt thích khám phá những địa điểm mới lạ,
             </div>
-            <p id="moreContents w-60" class="title-color" style="display: none;">
+            <p id="moreContents" class="title-color" style="display: none;">
                hòa mình vào thiên nhiên và tìm hiểu văn hóa địa phương. Mỗi chuyến đi đều mang lại cho tôi những trải nghiệm thú vị và những bài học quý giá về cuộc sống.
             </p>
             <div class="card-footer">
@@ -571,6 +571,32 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
+}
+
+</script>
+<script>
+   // Get the modal
+   var modals = document.getElementById("myModals");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var imgs = document.getElementById("myImgs");
+var modalImgs = document.getElementById("img01");
+var captionTexts = document.getElementById("captions");
+
+imgs.onclick = function() {
+    modal.style.display = "block";
+    modalImgs.src = this.src;
+    captionTexts.innerHTML = this.alt;
+    modalImgs.style.width = "600px";
+    modalImgs.style.height = "600px";
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closes")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
 }
 
 </script>
